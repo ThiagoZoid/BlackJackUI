@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="src.designs.ControladorJogo">
+   <children>
+      <SplitPane fx:id="plano" dividerPositions="0.65" layoutX="20.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <StackPane fx:id="caixaDeCartas" prefHeight="150.0" prefWidth="200.0" />
+            <VBox alignment="CENTER" prefHeight="298.0" prefWidth="175.0">
+               <children>
+                  <Label fx:id="nome" alignment="CENTER" prefHeight="60.0" prefWidth="210.0" text="Thiago" textAlignment="CENTER" textFill="#505050">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pontos" alignment="CENTER" prefHeight="80.0" prefWidth="210.0" text="19" textAlignment="CENTER" textFill="#505050">
+                     <font>
+                        <Font name="System Bold" size="73.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <StackPane prefHeight="150.0" prefWidth="200.0">
+                           <children>
+                              <Circle fx:id="botaoParar" fill="#dd3a31" onMouseClicked="#aoParar" radius="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                              <ImageView fitHeight="73.0" fitWidth="53.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../textures/cancel.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </StackPane>
+                        <StackPane prefHeight="150.0" prefWidth="200.0">
+                           <children>
+                              <Circle fx:id="botaoPedir" fill="#49d359" onMouseClicked="#aoPedir" radius="40.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                              <ImageView fitHeight="73.0" fitWidth="50.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../textures/ask.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </items>
+      </SplitPane>
+      <StackPane fx:id="planoRealce" prefHeight="150.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bcbcbcad" height="320.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="textoRealce" layoutX="265.0" layoutY="85.0" prefHeight="150.0" prefWidth="274.0" text="Jogador #1 parou!" textFill="#505050" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="imagemRealce" fitHeight="150.0" fitWidth="200.0" layoutX="101.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../textures/stop.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="pontosRealce" alignment="CENTER" contentDisplay="CENTER" layoutX="88.0" layoutY="85.0" prefHeight="150.0" prefWidth="177.0" text="21" textAlignment="CENTER" textFill="#505050">
+                     <font>
+                        <Font name="System Bold" size="100.0" />
+                     </font>
+                  </Label>
+                  <Button defaultButton="true" layoutX="517.0" layoutY="281.0" mnemonicParsing="false" onMouseClicked="#aoClicarEmContinuar" text="Continuar" />
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="src.designs.ControladorCadastro">
+   <children>
+      <Label fx:id="nomeJogador" alignment="CENTER" contentDisplay="CENTER" layoutX="181.0" layoutY="141.0" prefHeight="66.0" prefWidth="425.0" text="Jogador 1#" textFill="#e83f3f" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="45.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imagemJogador" fitHeight="100.0" fitWidth="100.0" layoutX="250.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0">
+         <image>
+            <Image url="@../textures/user.png" />
+         </image>
+      </ImageView>
+      <Button defaultButton="true" layoutX="526.0" layoutY="282.0" mnemonicParsing="false" onMouseClicked="#aoClicarEmInicio" text="Próximo" />
+      <TextField fx:id="campoNome" alignment="CENTER" layoutX="207.0" layoutY="215.0" onKeyPressed="#aoDigitar" onKeyReleased="#aoDigitar" promptText="Jogador 1#">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>
